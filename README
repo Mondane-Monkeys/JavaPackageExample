@@ -1,0 +1,7 @@
+# Java package example
+
+In package classa -> contains main, which uses data and objects from classb
+in package classb -> 
+ - Dancer object -> contains data and methods for a single dancer (Contains a DanceShoe)
+ - Dancer School -> contains a list of dancers currently enrolled in a school
+ - DancerCollection -> contains a dance school and a list of all dancers

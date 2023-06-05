@@ -22,13 +22,19 @@ public class DancerCollection {
         }
     }
 
+    public void addDancer(Dancer d){
+        danceSchool.addDancer(d);
+        if (dancers.putIfAbsent(d.name, d) != null) {
+            System.err.println(String.format("Dancer %s already added", d.name));
+        }
+    }
 
     public String toString(){
         StringBuilder s = new StringBuilder("From DancerCollection: \n");
         s.append("\t"+danceSchool.toString());
-        s.append("\n\nAll dancers");
+        s.append("\n\nAll dancers\n\t");
         for (Dancer dancer : dancers.values()) {
-            s.append("\n\t"+dancer.toString());
+            s.append(dancer.toString());
         }
         return s.toString();
     }
